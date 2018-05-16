@@ -1,0 +1,9 @@
+自定义模版生效需要重启服务器
+
+django 要我们把大段的文本写到一个文件里，然后 django 自己会去读取这个文件，django 再把读取到的内容传给 HttpResponse
+用 {{ }} 包起来的叫做模板变量，会被替换
+用 {% %} 包裹起来的叫做模板标签，功能则类似于函数，例如这里的 static 模板标签，它把跟在它后面的字符串 'css/bootstrap.min.css' 转换成正确的文件引入路径。
+block 也是一个模板标签，其作用是占位
+默认情况输出的内容不会被当作html解析，需要加|safe
+
+{% url %} 这个模板标签的作用是解析视图函数 blog:archives 对应的 URL 模式，并把 URL 模式中的年和月替换成 date.year，date.month 的值

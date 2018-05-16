@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <div class="panel panel-primary">
+        <form name="contact" action="." method="post" id="contact">
+            <div class="panel-heading">
+
+                <h3>写信给我</h3>
+            </div>
+            <div class="pabel-body">
+                <table>
+                    <!--as_table要添加这两句-->
+                    {{ form.as_table }}
+                </table>
+            </div>
+
+            <div class="pabel-footer">
+                <input type="button" value="提交" id="submit">
+                <!--前面的提交就没用了？？？？？-->
+            </div>
+            {%csrf_token%}
+        </form>
+    </div>
+    <!--{% if msg %}-->
+    <!--<div class="alert alert-warning">{{ msg }}</div>-->
+    <!--{% endif %}-->
+    <div id="msg">填写</div>
+</div>
+<script>
+	  $(function(){
+            $("#submit").click(function(){
+                $.ajax({
+                    url: '/contact/',
+                    type: 'post',
+                    data:$("#contact").serialize(),
+                   // contentType:'application/x-www-form-urlencoded',
+                    processData: true,
+                    dataType:'json',  //期望返回的数据类型
+                    success:function(msg){
+                    $("#msg").html(msg.msg);
+                    }
+                });
+	       });
+	});
+
+</script>
+<!--<form action="." method="post" enctype="multipart/form-data">-->
+<!--<table>-->
+<!--<tr>-->
+<!--<td>-->
+<!--{{ fileform.as_p }}-->
+<!--</td>-->
+<!--<td>-->
+<!--<input type="submit" value="提交" name="get_file">-->
+<!--</td>-->
+<!--</tr>-->
+<!--</table>-->
+
+<!--</form>-->
+
+{% endblock main %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+	 {% if msg %}
+    <div class="alert alert-warning">{{ msg }}</div>
+    {% endif %}
+    <form name="postform" action="." method="post">
+            <table>
+			{{ post_form.as_table }}
+            </table>
+
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+</div>
+
+{% endblock main %}

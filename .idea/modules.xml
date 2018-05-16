@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://J:/BaiduNetdiskDownload/教程视频/笔记积累/练习/.idea/12.iml" filepath="J:/BaiduNetdiskDownload/教程视频/笔记积累/练习/.idea/12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MxOnline/.idea/MxOnline.iml" filepath="$PROJECT_DIR$/../MxOnline/.idea/MxOnline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../djangowebsocket/.idea/djangowebsocket.iml" filepath="$PROJECT_DIR$/../djangowebsocket/.idea/djangowebsocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rest_test/.idea/rest_test.iml" filepath="$PROJECT_DIR$/../rest_test/.idea/rest_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/test1.iml" filepath="$PROJECT_DIR$/.idea/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zhihu/.idea/zhihu.iml" filepath="$PROJECT_DIR$/../zhihu/.idea/zhihu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zhihu_alike/.idea/zhihu_alike.iml" filepath="$PROJECT_DIR$/../zhihu_alike/.idea/zhihu_alike.iml" />
+    </modules>
+  </component>
+</project>
